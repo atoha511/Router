@@ -3,7 +3,8 @@
 class Router
 {
     public $route_list;
-
+    public $error404;
+    
     public function start()
     {
         $income_route = $_SERVER['REQUEST_URI'];
@@ -11,7 +12,7 @@ class Router
             include $this->route_list[$income_route];
             exit;
         } else {
-            echo "404";
+            echo $error404;
         }
     }
 }
