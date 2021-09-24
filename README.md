@@ -1,8 +1,20 @@
-# router
+# Использование:
 
+## 1. Создаем объект и добавляем массив со страницами переадрессации 
+```php
 $router = new Router();
 $router->route_list = [
     "/" => "../homepage.php",
-    "/1/2" => "../homepage.php"
+    "/about" => "../about.php"
 ];
+```
+
+## 2. Переадресовываем
+
+```php 
 $router->start();
+```
+
+
+
+
